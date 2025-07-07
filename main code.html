@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Srivatsan R | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Animated particles */
+    body::before {
+      content: '';
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(circle, rgba(0,255,255,0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(0,255,255,0.1) 1.5px, transparent 2px);
+      background-size: 50px 50px;
+      z-index: -2;
+      animation: moveBackground 100s linear infinite;
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 1000px 1000px, -1000px -1000px; }
+    }
+
+    /* Welcome screen background image */
+    .welcome-screen {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+
+ 
+    
+
+    .welcome-screen::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      z-index: -1;
+    }
+
+    /* Typewriter effect */
+    .typewriter h1 {
+      color: aqua;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid aqua;
+      animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+      font-size: 2.8em;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .glass-button {
+      margin-top: 30px;
+      padding: 15px 35px;
+      font-size: 1.3em;
+      background: rgba(0, 255, 255, 0.1);
+      border: 1px solid rgba(0, 255, 255, 0.5);
+      color: aqua;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .glass-button:hover {
+      background: rgba(0, 255, 255, 0.25);
+      transform: scale(1.05) rotateY(4deg);
+      box-shadow: 0 15px 25px rgba(0, 255, 255, 0.4);
+    }
+
+    .portfolio {
+      opacity: 0;
+      transform: scale(0.98) translateY(30px);
+      transition: all 1s ease;
+      display: none;
+    }
+
+    .portfolio.show {
+      display: block;
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    header {
+      background-color: #222;
+      color: red;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.4em;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: aqua;
+      border-left: 5px solid aqua;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+
+    p, li {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #00ccff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #111;
+      margin-top: 50px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Welcome Screen -->
+<div class="welcome-screen" id="welcome">
+  <div class="typewriter">
+    <h1>👋 Welcome to Srivatsan's Portfolio</h1>
+  </div>
+  <button class="glass-button" onclick="enterSite()">🌐 Enter to my Portfolio</button>
+</div>
+
+<!-- Portfolio Section -->
+<div class="portfolio" id="portfolio">
+  <header>
+    <h1>Srivatsan R</h1>
+    <p>Student | Aspiring Full-Stack Developer </p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>About Me</h2>
+      <p>I am <strong>srivatsan R, a second – year B.Tech IT student at Saveetha School of  Engneering .</strong> I am passionate about web and programming. I have basic knowledge 
+of HTML, CSS, C Programming, SQL, Python(Intermediate). I have currently working on small projects like a portfolio website, landing page, and calculator. I enjoy 
+learning new technologies and improving my coding skills. I am looking for internship opportunities to gain hands-on experience. The aforementioned projects are little, and I am prepared to undertake the larger project associated with the company as soon as possible. </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript (Basics)</li>
+        <li>Python (Beginner)</li>
+        <li>C Programming</li>
+        <li>Database Management (SQL)</li>
+      </ul>
+    </section>
+
+     </section>
+       <h2>Tolls And Technologies Know to Used</h2>
+       <ul>
+          <li>Github And Git</li>
+          <li> Visual studio code </li>
+          <li>Intermediate Level In Excel</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Done a project on NTN communication in tech star summit which was held in saveetha school of Engneering</strong></li>
+        <li>The main purpose of the project is</li>
+        <centre> <li><strong># ENHANCING THE SECURE COMMUNICATION IN NON-TERRESTRIAL NETWORKS (NTN) BY
+              USING CNN (CONVOLUTIONAL NEURAL NETWORKS OVER KNN (K-NEAREST NEIGHBORS)</strong></li>
+        </centre>
+        <li><strong># ENHANCING THE DYNAMIC RESOURCE ALLOCATION IN INTEGRATION OF 5G AND NON-
+        TERRESTRIAL NETWORKS IN NONTERRESTRIAL NETWORKS CNN (CONVOLUTIONAL NEURAL NETWORKS) OVER ANT COLONY OPTIMIZATION (ACO) FOR ADAPTIVE ROUTING</strong></li>
+        <li>And the above project are gone with main algothirm of KNN , CNN and ACO which was played the main role to enchances the secure communication</li>
+
+       
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>B.Tech in Information Technology</strong><br>
+      Saveetha School of Engineering , Chennai<br>
+      2024 – 2028</p>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li><a href="https://drive.google.com/file/d/1CrDPA6fsPSEs2qzJ4v1fAV8n-C1G0m5i/view?usp=drive_link" target="_blank">TCS iON Career Edge – Young Professional</a></li>
+        <li><a href="https://drive.google.com/file/d/1EJW9_Lmfn668jyoSs-FPUJZBvyfQo7BH/view?usp=drive_link" target="_blank">Hp Project Development</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Resume</h2>
+      <p><a href="https://drive.google.com/file/d/1HHi3RpP53VdaYgP-IpLjo3WJ0FvDHtE_/view?usp=drive_link" target="_blank">📄 View/Download My Resume</a></p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> 6383088686</p>
+      <p><strong>Email:</strong> srivatsanpu@gmail.com</p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/srivxtsan" target="_blank">github.com/srivxtsan</a></p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Srivatsan R | Built with ❤️ using HTML + CSS
+  </footer>
+</div>
+
+<script>
+  function enterSite() {
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("portfolio").classList.add("show");
+  }
+</script>
+
+</body>
+</html>
